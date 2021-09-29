@@ -1,0 +1,52 @@
+Vector in rstudio
+Scalar - one element vector that hold some constant value, 
+
+Matrix 2d r data structure,each of element must be same type numeric logical characteristics, resemblance tables
+
+Array similar to matrix, more dimensions than matrix, same as only one type of data
+
+Data frames similar to matrix but contain different kind of data , data.frame(), first create vectors which hold a kind of data
+
+List a collection of objects - can store all data types, also a vector but differ from atomic vectors
+
+Statiscal inference also 
+
+Hadoop and Map reduce framework 
+Hadoop open source for big data framework, tools for allow to store massive structured and unstructured data, Disturbuted storage for big data. 
+Hadoop, characteristics are
+ Highly Disturbuted
+ Configure to support massive file by providing high scalability and high bandwidth
+ Fault tolerant and robust 
+ Ability to each file as storing as sequence of blocks.typically in 64mb
+ No of safety measures to minimize data loss. Upon initialization name node replicates itself,
+ Replicate of data nodes 
+Meta ndata is stored in name node and updated consistently by edit log 
+Hw failure cluster rebalancing, moving data node from to another. Replicating of healthy blocks to stop corruption of data node, data integrity in case meta data disk failure automatic fail backup 
+
+
+Data transformation and aggregation FF and ff base packages 
+
+Cockroach db
+
+
+
+
+Mapreduce framework
+HDFS cannot give any insight for the stored data
+Can perform any analysis in the data
+For developing application to process and  analyze in Disturbuted and parallel manner
+Data stored in Hadoop is processed
+In mapreduce it consist of a number of stages
+User designs a the mapreduce application, by defining for format of user data which gets user input as independent data chunks
+Mapper function do it's function in parallel
+ Independent chunks across Hadoop and mapper function
+Mapper function return a key-value pair ,once func mappes the data according to user requirements and which become input for reducer functions
+Role of reducer is to perform a aggeration and perform calculation of specific  statistics for the user again it gives key- value pair  as output
+Storage and mapreduce function in same node, 
+Usual feature of mapreduce is it very often change type of input data and output format according to the user requirements. User can create own data formats of the request data which allows flexibility in working wth of data which is requested. A mapreduce can have many mappers and users can also specific many reducer functions for each job. 
+User can also specific combiner function, which summarizes the output records from the 
+mapper before passing them to the reducer function
+
+
+Count occurrence of word in a sentence
+Mapreduce function recognize the format of input and, mapper splits the sentence into individual word and assigned key and each and every word is sorted. Assign a value 1 to occurrence of each key, extracted words are shuffled and sorted  and stores the values of key. A block of keys are created and each and every occurrence of key is stored, whenever a key occurrence is found,values is in block is incremented accordingly. Then the final value is returned as an aggergated value, like(bank -2 times etc)  
